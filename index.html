@@ -4,26 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Captcha Verification</title>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <style>
-        body {
+        /* Hide scrollbars and center the captcha */
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f5f5f5;
         }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .cf-turnstile {
+            display: inline-block;
         }
     </style>
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
-    <div class="container">
-        <div class="cf-turnstile" data-sitekey="YOUR_TURNSTILE_SITEKEY"></div>
-    </div>
+    <div class="cf-turnstile" data-sitekey="YOUR_TURNSTILE_SITEKEY"></div>
 </body>
 </html>
