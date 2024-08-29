@@ -3,51 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy</title>
+    <title>Captcha Verification</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
         }
-        h1, h2, h3 {
-            color: #333;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     </style>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
-    <h1>Privacy Policy</h1>
-    <p>Your privacy is important to us. This privacy policy explains how we handle and protect your data when you use our services.</p>
-
-    <h2>Information We Collect</h2>
-    <p>We may collect the following information:</p>
-    <ul>
-        <li>IP addresses</li>
-        <li>Verification data</li>
-        <!-- Add more information as needed -->
-    </ul>
-
-    <h2>How We Use Your Information</h2>
-    <p>We use your information to:</p>
-    <ul>
-        <li>Verify your identity</li>
-        <li>Improve our services</li>
-        <!-- Add more uses as needed -->
-    </ul>
-
-    <h2>Data Security</h2>
-    <p>We take reasonable measures to protect your data from unauthorized access and misuse.</p>
-
-    <h2>Contact Us</h2>
-    <p>If you have any questions about this privacy policy, please contact us at <a href="mailto:your-email@example.com">your-email@example.com</a>.</p>
-
-    <p>Last updated: [Date]</p>
+    <div class="container">
+        <div class="cf-turnstile" data-sitekey="YOUR_TURNSTILE_SITEKEY"></div>
+    </div>
 </body>
 </html>
